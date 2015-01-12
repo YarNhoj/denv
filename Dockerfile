@@ -9,7 +9,7 @@ RUN apt-get update && apt-get install -y\
 RUN useradd jray
 
 #Install my config files (denv) github repo
-RUN git clone https://github.com/YarNhoj/denv.git /home/jray 
+RUN git clone https://github.com/YarNhoj/dvol.git /home/jray 
 
 #Setup my ENV
 ENV PATH /home/jray/scripts:$PATH
