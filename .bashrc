@@ -1,6 +1,7 @@
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
+#set -x
 
 # If not running interactively, don't do anything
 case $- in
@@ -118,6 +119,11 @@ PATH=$PATH:~/bin:~/scripts
 
 #Set SSH Keys
 ssh-add ~/.ssh/Keys/*.priv > /dev/null 2>&1
+
+#Set autocompletion
+for file in /etc/bash_completion.d/*; do
+  source $file
+done
 
 #Set git prompt
 [ -f ~/.bash_vcs ] && source ~/.bash_vcs
